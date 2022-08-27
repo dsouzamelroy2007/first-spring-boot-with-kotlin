@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="GET /api/banks" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-08-20T19:01:35" hostname="C02XD07RJG5J.ad.here.com" time="0.475">
+  <properties/>
+  <testcase name="should return all banks()" classname="com.kotlin.springboot.practice.controller.BankControllerTest$GetBanks" time="0.475"/>
+  <system-out><![CDATA[00:31:33.951 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::       (v2.5.0-SNAPSHOT)
+
+2022-08-21 00:31:34.399  INFO 65543 --- [    Test worker] c.k.s.p.controller.BankControllerTest    : Starting BankControllerTest using Java 11.0.15 on C02XD07RJG5J.ad.here.com with PID 65543 (started by dsouza1 in /Users/dsouza1/Documents/GitHub/first-spring-boot-with-kotlin)
+2022-08-21 00:31:34.401  INFO 65543 --- [    Test worker] c.k.s.p.controller.BankControllerTest    : No active profile set, falling back to default profiles: default
+2022-08-21 00:31:35.672  INFO 65543 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-08-21 00:31:35.805  INFO 65543 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2022-08-21 00:31:35.805  INFO 65543 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-08-21 00:31:35.805  INFO 65543 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2022-08-21 00:31:35.820  INFO 65543 --- [    Test worker] c.k.s.p.controller.BankControllerTest    : Started BankControllerTest in 1.86 seconds (JVM running for 3.1)
+2022-08-21 00:31:35.821  INFO 65543 --- [    Test worker] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
+2022-08-21 00:31:35.823  INFO 65543 --- [    Test worker] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2022-08-21 00:31:35.845  INFO 65543 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.kotlin.springboot.practice.controller.BankControllerTest$GetBanks], using SpringBootContextLoader
+2022-08-21 00:31:35.846  INFO 65543 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.kotlin.springboot.practice.controller.BankControllerTest$GetBanks]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-08-21 00:31:35.846  INFO 65543 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.kotlin.springboot.practice.controller.BankControllerTest$GetBanks]: GetBanks does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-08-21 00:31:35.849  INFO 65543 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.kotlin.springboot.practice.MyFirstKotlinSpringBootApplication for test class com.kotlin.springboot.practice.controller.BankControllerTest$GetBanks
+2022-08-21 00:31:35.851  INFO 65543 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-08-21 00:31:35.852  INFO 65543 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@16d431b4, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6c0b51da, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7558633, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5657967b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@61394494, org.springframework.test.context.support.DirtiesContextTestExecutionListener@578a5ce8, org.springframework.test.context.event.EventPublishingTestExecutionListener@7c453c34, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@16cb9989, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3dfd6220, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3815146b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6de43bc1, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@27a9f025, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@71936a92]
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/banks
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.kotlin.springboot.practice.controller.BankController
+           Method = com.kotlin.springboot.practice.controller.BankController#getBanks()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = [{"account_number":"1234","trust":3.14,"default_transaction_fee":17},{"account_number":"1010","trust":17.0,"default_transaction_fee":0},{"account_number":"5678","trust":0.0,"default_transaction_fee":100}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

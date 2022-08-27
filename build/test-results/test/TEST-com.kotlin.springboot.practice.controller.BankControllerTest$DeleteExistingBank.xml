@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DELETE /api/banks/{accountNumber}" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-08-20T19:01:36" hostname="C02XD07RJG5J.ad.here.com" time="0.548">
+  <properties/>
+  <testcase name="should delete the bank with the given account number()" classname="com.kotlin.springboot.practice.controller.BankControllerTest$DeleteExistingBank" time="0.013"/>
+  <testcase name="should return NOT FOUND if no bank with given account number exists()" classname="com.kotlin.springboot.practice.controller.BankControllerTest$DeleteExistingBank" time="0.534"/>
+  <system-out><![CDATA[2022-08-21 00:31:36.536  INFO 65543 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.kotlin.springboot.practice.controller.BankControllerTest$DeleteExistingBank], using SpringBootContextLoader
+2022-08-21 00:31:36.537  INFO 65543 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.kotlin.springboot.practice.controller.BankControllerTest$DeleteExistingBank]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-08-21 00:31:36.537  INFO 65543 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.kotlin.springboot.practice.controller.BankControllerTest$DeleteExistingBank]: DeleteExistingBank does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-08-21 00:31:36.540  INFO 65543 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.kotlin.springboot.practice.MyFirstKotlinSpringBootApplication for test class com.kotlin.springboot.practice.controller.BankControllerTest$DeleteExistingBank
+2022-08-21 00:31:36.544  INFO 65543 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-08-21 00:31:36.545  INFO 65543 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@31e7afde, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@349f3ff7, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@2487e20, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3c9f4376, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@308a9264, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7da77305, org.springframework.test.context.event.EventPublishingTestExecutionListener@3cdfbbef, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7a1ddbf1, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1e606f64, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@581918f6, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1958c0d9, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@d8e4250, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@100807ca]
+
+MockHttpServletRequest:
+      HTTP Method = DELETE
+      Request URI = /api/banks/1234
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.kotlin.springboot.practice.controller.BankController
+           Method = com.kotlin.springboot.practice.controller.BankController#deleteBank(String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 204
+    Error message = null
+          Headers = []
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::       (v2.5.0-SNAPSHOT)
+
+2022-08-21 00:31:36.601  INFO 65543 --- [    Test worker] .c.BankControllerTest$DeleteExistingBank : Starting BankControllerTest.DeleteExistingBank using Java 11.0.15 on C02XD07RJG5J.ad.here.com with PID 65543 (started by dsouza1 in /Users/dsouza1/Documents/GitHub/first-spring-boot-with-kotlin)
+2022-08-21 00:31:36.602  INFO 65543 --- [    Test worker] .c.BankControllerTest$DeleteExistingBank : No active profile set, falling back to default profiles: default
+2022-08-21 00:31:36.978  INFO 65543 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-08-21 00:31:37.078  INFO 65543 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2022-08-21 00:31:37.078  INFO 65543 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-08-21 00:31:37.079  INFO 65543 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2022-08-21 00:31:37.084  INFO 65543 --- [    Test worker] .c.BankControllerTest$DeleteExistingBank : Started BankControllerTest.DeleteExistingBank in 0.52 seconds (JVM running for 4.363)
+2022-08-21 00:31:37.084  INFO 65543 --- [    Test worker] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
+2022-08-21 00:31:37.085  INFO 65543 --- [    Test worker] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+
+MockHttpServletRequest:
+      HTTP Method = DELETE
+      Request URI = /api/banks/does_not_exist
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.kotlin.springboot.practice.controller.BankController
+           Method = com.kotlin.springboot.practice.controller.BankController#deleteBank(String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = java.util.NoSuchElementException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Content-Type:"text/plain;charset=UTF-8", Content-Length:"56"]
+     Content type = text/plain;charset=UTF-8
+             Body = Could not find a bank with account number does_not_exist
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
